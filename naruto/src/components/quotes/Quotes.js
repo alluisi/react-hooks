@@ -1,12 +1,13 @@
 import styled from 'styled-components';
-import { string } from 'prop-types';
+import { string, func } from 'prop-types';
+import { Button } from '../button';
 
-export const Quotes = ({ quote, speaker }) => {
+export const Quotes = ({ quote, speaker, onUpdate }) => {
     return (
         <Wrapper>
             <Quote>{quote}</Quote>
             <Speaker> - {speaker}</Speaker>
-            <button>Quote No Jutsu</button>
+            <Button onClick={onUpdate}>Quote No Jutsu</Button>
         </Wrapper>
     )
 }
@@ -14,6 +15,7 @@ export const Quotes = ({ quote, speaker }) => {
 Quotes.propTypes = {
     quote: string,
     speaker: string,
+    onUpdate: func
 };
 
 const Wrapper = styled.div`
