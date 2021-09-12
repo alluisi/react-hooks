@@ -1,1 +1,1 @@
-export * from './Quotes';
+export { Quotes } from './Quotes';

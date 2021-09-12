@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import narutoImg from '../../images/naruto.png';
+import { Quotes } from '../../components';
 
 export function App() {
     return (
         <div className="App">
             <Content>
-                <p>quote xpto - Speaker</p>
-                <button>Quote No Jutsu</button>
+                <Quotes quote='ok' speaker='Speaker' />
                 <NarutoImg src={narutoImg} alt='Naruto with a kunai' />
             </Content>
         </div>
